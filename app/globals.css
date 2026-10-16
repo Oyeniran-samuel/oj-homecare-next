@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --teal: #0F6E6E;
+  --navy: #1A2E35;
+  --light-gray: #F5F7F9;
+  --light-teal: #E0F2F1;
+}
+
+@theme inline {
+  --color-teal: var(--teal);
+  --color-navy: var(--navy);
+  --color-light-gray: var(--light-gray);
+  --color-light-teal: var(--light-teal);
+  --font-sans: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #092D3C;
+  background: #ffffff;
+  line-height: 1.65;
+}
+
+main,
+main > *,
+main section {
+  min-width: 0;
+}
+
+@media (min-width: 1200px) {
+  main div.inline-block {
+    width: calc(50% - 12px);
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Item 3: every editorial spread is its own PDF page - one viewport tall,
+     vertically centred, so the next section never bleeds into the same view.
+     Scoped to direct children of <main> that actually contain a photo.
+     The founder photo is only used for detection here - never restyled. */
+  main > div:has(.media-frame),
+  main > div:has(img[alt="Founder portrait"]) {
+    min-height: calc(100vh - 84px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main > div:has(.media-frame) > *,
+  main > div:has(img[alt="Founder portrait"]) > * {
+    width: 100%;
+  }
+
+  /* Brochure layout: every photo sits BESIDE its text at its exact native
+     aspect ratio, top-aligned with the text, never stretched or cropped.
+     Founder image is excluded everywhere and left untouched. */
+  .media-frame {
+    align-self: start;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .media-frame > img:not([alt="Founder portrait"]):not([alt="OJ Home Care logo"]) {
+    position: static;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: top center;
+    border-radius: 16px;
+  }
+
+  img[alt="Consultation on couch"] {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main [class~="px-12"]:not(#founder) {
+    padding-inline: 24px !important;
+  }
+
+  main [class~="grid-cols-3"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .media-frame {
+    align-self: flex-start;
+    height: auto;
+    min-height: 0;
+  }
+
+  .media-frame > img:not([alt="Founder portrait"]) {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  .media-frame > img:not([alt="Founder portrait"]) {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+}

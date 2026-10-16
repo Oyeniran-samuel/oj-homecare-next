@@ -1,0 +1,191 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const whyLinks = [
+  ["Why Families Choose Us", "/why-oj#why-families"],
+  ["Trusted Care In Your Home", "/why-oj#trusted-care"],
+  ["Compassionate Care, Better Life", "/why-oj#promise"],
+  ["Support Systems", "/why-oj#support-systems"],
+  ["Technology in Care", "/why-oj#technology"],
+];
+
+const aboutLinks = [
+  ["A Letter from the Founder", "/about#founder"],
+  ["Who We Are", "/about#who-we-are"],
+  ["Our Team", "/about#who-we-are"],
+  ["Core Values", "/about#why-oj"],
+  ["Our Philosophy", "/about#dignity"],
+  ["Family Education", "/about#family-education"],
+  ["Quality Assurance", "/about#quality"],
+];
+
+const mobileLinks = [
+  ["About Us", "/about"],
+  ["Services", "/services"],
+  ["Why OJ", "/why-oj"],
+  ["Testimonials", "/testimonials"],
+  ["Contact", "/contact"],
+];
+
+function Brand() {
+  return (
+    <Link className="flex shrink-0 items-center no-underline" href="/">
+      <Image
+        src="/images/oj-home-care-logo.jpg"
+        alt="OJ Home Care logo"
+        width={52}
+        height={52}
+        className="mr-3.5 h-[52px] w-[52px] rounded-full bg-white object-cover max-[420px]:mr-2 max-[420px]:h-11 max-[420px]:w-11"
+        priority
+      />
+      <span className="text-[23px] leading-tight font-bold text-white max-[1399px]:text-lg max-[420px]:text-lg">
+        OJ Home Care
+        <small className="block text-[13px] font-normal tracking-[0.04em] text-[#7FB5AE] max-[767px]:hidden">
+          Caring Hearts, Helping Hands
+        </small>
+      </span>
+    </Link>
+  );
+}
+
+function Dropdown({
+  title,
+  href,
+  links,
+}: {
+  title: string;
+  href: string;
+  links: string[][];
+}) {
+  return (
+    <span className="group relative inline-block">
+      <a
+        href={href}
+        aria-haspopup="true"
+        className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+      >
+        {title}
+      </a>
+      <span className="absolute top-full left-0 z-[200] hidden min-w-[250px] rounded-b-lg bg-[#092D3C] py-2 group-hover:block group-focus-within:block">
+        {links.map(([label, url]) => (
+          <a
+            key={label}
+            href={url}
+            className="block whitespace-nowrap px-[18px] py-2.5 text-[15px] text-white no-underline hover:bg-[#0F6E6E]"
+          >
+            {label}
+          </a>
+        ))}
+      </span>
+    </span>
+  );
+}
+
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  return (
+    <header>
+      <nav className="w-full bg-[#092D3C] py-4">
+        <div className="mx-auto flex w-full max-w-[1300px] items-center justify-between px-10 max-[1100px]:px-6 max-[420px]:px-4">
+          <Brand />
+          <div className="hidden items-center gap-4 min-[1101px]:flex">
+            <Link
+              href="/services"
+              className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+            >
+              Services
+            </Link>
+            <Dropdown title="Why OJ" href="/why-oj" links={whyLinks} />
+            <Link
+              href="/testimonials"
+              className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+            >
+              Testimonials
+            </Link>
+            <Link
+              href="/contact"
+              className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+            >
+              Contact
+            </Link>
+            <Dropdown title="About Us" href="/about" links={aboutLinks} />
+            <Link
+              href="/contact"
+              className="whitespace-nowrap rounded-lg bg-[#0D7377] px-4 py-2.5 font-semibold text-white no-underline transition-colors hover:bg-[#0B5656] max-[1399px]:text-[13px]"
+            >
+              Schedule a Free Consultation
+            </Link>
+          </div>
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMenuOpen((open) => !open)}
+            className="hidden cursor-pointer border-0 bg-transparent p-2 text-[28px] leading-none text-white max-[1100px]:block"
+          >
+            &#9776;
+          </button>
+        </div>
+      </nav>
+
+      <button
+        type="button"
+        aria-label="Close navigation menu"
+        tabIndex={menuOpen ? 0 : -1}
+        onClick={closeMenu}
+        className={`fixed inset-0 z-[9998] border-0 bg-black/60 transition-opacity ${
+          menuOpen ? "visible opacity-100" : "invisible opacity-0"
+        }`}
+      />
+      <aside
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+        aria-hidden={!menuOpen}
+        inert={!menuOpen}
+        className={`fixed top-0 right-0 z-[9999] flex h-dvh w-3/4 max-w-[320px] flex-col bg-[#1A2E35] p-10 transition-transform duration-300 ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          type="button"
+          onClick={closeMenu}
+          aria-label="Close navigation menu"
+          tabIndex={menuOpen ? 0 : -1}
+          className="flex size-10 self-end items-center justify-center rounded-lg border border-white/30 bg-transparent p-0 text-3xl leading-none text-white"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div className="mt-[60px] flex flex-col gap-[30px]">
+          {mobileLinks.map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              onClick={closeMenu}
+              tabIndex={menuOpen ? 0 : -1}
+              className="text-[1.1rem] font-semibold tracking-[1px] text-white uppercase no-underline"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+        <Link
+          href="/contact"
+          onClick={closeMenu}
+          tabIndex={menuOpen ? 0 : -1}
+          className="mt-auto w-fit max-w-full self-start rounded-lg bg-[#0F6E6E] px-3 py-2 text-center text-[14px] leading-snug font-bold text-white uppercase no-underline"
+        >
+          Schedule a Free Consultation
+        </Link>
+      </aside>
+    </header>
+  );
+}
