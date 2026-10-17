@@ -141,7 +141,7 @@ export default function Home() {
       <section id="getting-started">
         <div className="mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] px-12 py-14 max-[767px]:px-5 max-[767px]:py-9">
           <div className="grid grid-cols-[42%_58%] gap-0 max-[767px]:grid-cols-1">
-            <div className="order-1 max-[767px]:order-2">
+            <div className="order-1">
               <Image
                 src="/images/home-onboarding-pdf.jpg"
                 alt="Consultation on couch"
@@ -150,7 +150,7 @@ export default function Home() {
                 className="max-w-full rounded-2xl object-contain max-[767px]:mt-6"
               />
             </div>
-            <div className="order-2 pl-12 max-[767px]:order-1 max-[767px]:pl-0">
+            <div className="order-2 pl-12 max-[767px]:pl-0">
               <p className="mb-2 text-[13px] font-semibold tracking-[2px] text-[#0D7377] uppercase">
                 Getting Started
               </p>

@@ -57,8 +57,8 @@ export default function AboutPage() {
             {" "}
           </div>
           {" "}
-          <div className={"relative min-h-[300px] aspect-[3/4] overflow-hidden max-[767px]:mt-6 max-[767px]:min-h-0 md:aspect-[2/3] md:self-start md:basis-[42%]"}>
-            <Image src={"/images/about-founder.jpg"} alt={"Founder portrait"} className={"absolute inset-0 h-full w-full object-cover object-top md:object-[62%_center] max-w-full"} width={1080} height={608} />
+          <div className={"relative w-full overflow-hidden aspect-[0.49] md:self-start md:basis-[34%] max-[767px]:mt-6"}>
+            <Image src={"/images/about-founder.jpg"} alt={"Founder portrait"} className={"absolute inset-0 h-full w-full object-cover object-[40%_center] max-w-full"} width={1080} height={608} />
           </div>
           {" "}
         </div>
@@ -446,8 +446,10 @@ export default function AboutPage() {
         </div>
         {" "}
         <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"DID YOU KNOW? Professional caregiver training reduces fall risk in the home by up to 50%. Falls are the leading cause of hospitalization in adults over 65."}
-        </div>
+          <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0F6E6E] uppercase not-italic"}>{"DID YOU KNOW?"}</p>
+            <p className={"mt-0 mb-0"}>{"“Professional caregiver training reduces fall risk in the home by up to 50%. Falls are the leading cause of hospitalization in adults over 65.”"}
+            </p>
+            </div>
         {" "}
       </div>
       {" "}

@@ -32,6 +32,39 @@ main section {
   min-width: 0;
 }
 
+/* Tablet only (768-1023px): the text column is too narrow for two fixed
+   300px feature cards, so they collapse to one per row and the section runs
+   very long. Widen the text column and trim the cards just enough to pair. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main div[class~="md:basis-[42%]"].media-frame {
+    flex: 0 0 30%;
+  }
+
+  main div[class~="md:basis-[58%]"] {
+    flex: 0 0 70%;
+    padding-left: 16px;
+    padding-right: 0;
+  }
+
+  /* An inline-block's advance width is width + margin-right, so the card
+     must be trimmed by MORE than its gutter or the pair overflows and
+     wraps. The 4px slack absorbs the newline whitespace between cards. */
+  main div.inline-block {
+    width: calc(50% - 20px);
+    margin-right: 12px;
+  }
+}
+
+/* iPad Pro landscape lands in the desktop rules above, where the fixed 300px
+   cards still cannot pair inside the 58% column. Only the card width is
+   corrected here; 1200px+ keeps its own rule below. */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  main div.inline-block {
+    width: calc(50% - 20px);
+    margin-right: 12px;
+  }
+}
+
 @media (min-width: 1200px) {
   main div.inline-block {
     width: calc(50% - 12px);
@@ -58,10 +91,10 @@ main section {
   }
 
   /* Brochure layout: every photo sits BESIDE its text at its exact native
-     aspect ratio, top-aligned with the text, never stretched or cropped.
-     Founder image is excluded everywhere and left untouched. */
+     aspect ratio, vertically centred against the text block, never stretched
+     or cropped. Founder image is excluded everywhere and left untouched. */
   .media-frame {
-    align-self: start;
+    align-self: center;
     min-height: 0;
     overflow: visible;
   }
@@ -96,7 +129,7 @@ main section {
   }
 
   .media-frame {
-    align-self: flex-start;
+    align-self: center;
     height: auto;
     min-height: 0;
   }
@@ -112,6 +145,18 @@ main section {
 }
 
 @media (max-width: 767px) {
+  /* Mobile: the photo leads its section instead of trailing below the text.
+     Scoped to .media-frame sections only - the founder block is untouched. */
+  main div:has(> .media-frame) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main div:has(> .media-frame) > .media-frame {
+    order: -1;
+    margin-top: 0;
+  }
+
   .media-frame > img:not([alt="Founder portrait"]) {
     position: static;
     display: block;

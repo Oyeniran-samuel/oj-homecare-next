@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const serviceLinks = [
   ["Personal Care", "/personal-care"],
@@ -107,12 +108,12 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-5 max-[767px]:mt-2">
-            <a
-              href="tel:+14047160100"
+            <Link
+              href="/contact"
               className="inline-block max-w-full rounded-lg bg-[#0D7377] px-4 py-2.5 font-semibold whitespace-normal text-white no-underline transition-colors hover:bg-[#0B5656]"
             >
               Schedule a Free Consultation
-            </a>
+            </Link>
           </p>
         </div>
       </div>

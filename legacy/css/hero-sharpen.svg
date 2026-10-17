@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-  <filter id="sharpen" x="-5%" y="-5%" width="110%" height="110%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="softened"/>
-    <feComposite in="SourceGraphic" in2="softened" operator="arithmetic" k1="0" k2="1.35" k3="-0.35" k4="0"/>
-  </filter>
-</svg>

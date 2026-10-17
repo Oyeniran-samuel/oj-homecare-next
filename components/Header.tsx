@@ -22,13 +22,24 @@ const aboutLinks = [
   ["Quality Assurance", "/about#quality"],
 ];
 
-const mobileLinks = [
-  ["About Us", "/about"],
-  ["Services", "/services"],
-  ["Why OJ", "/why-oj"],
-  ["Testimonials", "/testimonials"],
-  ["Contact", "/contact"],
+const serviceLinks = [
+  ["Personal Care", "/personal-care"],
+  ["Companion Care", "/companion-care"],
+  ["Memory & Dementia Care", "/memory-care"],
+  ["Cognitive Wellness", "/cognitive-wellness"],
+  ["Recovery & Transitional Care", "/recovery-care"],
+  ["Chronic Disease Management", "/chronic-care"],
+  ["Respite Care", "/respite-care"],
+  ["Medication Support", "/medication-support"],
 ];
+
+const mobileLinks = [
+  ["About Us", "/about", aboutLinks],
+  ["Services", "/services", serviceLinks],
+  ["Why OJ", "/why-oj", whyLinks],
+  ["Testimonials", "/testimonials", []],
+  ["Contact", "/contact", []],
+] as const;
 
 function Brand() {
   return (
@@ -86,13 +97,15 @@ function Dropdown({
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openSection, setOpenSection] = useState<string | null>(null);
 
   function closeMenu() {
     setMenuOpen(false);
+    setOpenSection(null);
   }
 
   return (
-    <header>
+    <header className="sticky top-0 z-[1000]">
       <nav className="w-full bg-[#092D3C] py-4">
         <div className="mx-auto flex w-full max-w-[1300px] items-center justify-between px-10 max-[1100px]:px-6 max-[420px]:px-4">
           <Brand />
@@ -142,7 +155,7 @@ export default function Header() {
         aria-label="Close navigation menu"
         tabIndex={menuOpen ? 0 : -1}
         onClick={closeMenu}
-        className={`fixed inset-0 z-[9998] border-0 bg-black/60 transition-opacity ${
+        className={`fixed inset-0 z-[9998] border-0 bg-black/25 backdrop-blur-[3px] transition-opacity ${
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       />
@@ -151,7 +164,7 @@ export default function Header() {
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
         inert={!menuOpen}
-        className={`fixed top-0 right-0 z-[9999] flex h-dvh w-3/4 max-w-[320px] flex-col bg-[#1A2E35] p-10 transition-transform duration-300 ${
+        className={`fixed top-0 right-0 z-[9999] flex h-dvh w-[250px] max-w-[68%] flex-col bg-[#1A2E35] p-7 transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -164,24 +177,84 @@ export default function Header() {
         >
           <span aria-hidden="true">&times;</span>
         </button>
-        <div className="mt-[60px] flex flex-col gap-[30px]">
-          {mobileLinks.map(([label, href]) => (
-            <a
-              key={label}
-              href={href}
-              onClick={closeMenu}
-              tabIndex={menuOpen ? 0 : -1}
-              className="text-[1.1rem] font-semibold tracking-[1px] text-white uppercase no-underline"
-            >
-              {label}
-            </a>
+        <div className="mt-[48px] flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto overscroll-contain pr-1">
+          {mobileLinks.map(([label, href, children]) => (
+            <div key={label}>
+              {children.length > 0 ? (
+                <button
+                  type="button"
+                  onClick={() => setOpenSection(openSection === label ? null : label)}
+                  aria-expanded={openSection === label}
+                  aria-controls={`mobile-submenu-${label}`}
+                  tabIndex={menuOpen ? 0 : -1}
+                  className="flex w-full items-center justify-between gap-3 text-left text-[1.1rem] font-semibold tracking-[1px] text-white uppercase"
+                >
+                  {label}
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    className={`h-4 w-4 shrink-0 transition-transform duration-300 ease-out ${
+                      openSection === label ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+              ) : (
+                <a
+                  href={href}
+                  onClick={closeMenu}
+                  tabIndex={menuOpen ? 0 : -1}
+                  className="block text-[1.1rem] font-semibold tracking-[1px] text-white uppercase no-underline"
+                >
+                  {label}
+                </a>
+              )}
+              {children.length > 0 && (
+                <div
+                  id={`mobile-submenu-${label}`}
+                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                    openSection === label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="mt-2 ml-4 flex flex-col gap-2 border-l border-white/15 pl-3">
+                      <a
+                        href={href}
+                        onClick={closeMenu}
+                        tabIndex={menuOpen ? 0 : -1}
+                        className="block text-[0.8rem] font-medium text-[#C6D5D9] no-underline"
+                      >
+                        Overview
+                      </a>
+                      {children.map(([childLabel, childHref]) => (
+                        <a
+                          key={childLabel}
+                          href={childHref}
+                          onClick={closeMenu}
+                          tabIndex={menuOpen ? 0 : -1}
+                          className="block text-[0.8rem] font-normal text-[#7FB5AE] no-underline"
+                        >
+                          {childLabel}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
         <Link
           href="/contact"
           onClick={closeMenu}
           tabIndex={menuOpen ? 0 : -1}
-          className="mt-auto w-fit max-w-full self-start rounded-lg bg-[#0F6E6E] px-3 py-2 text-center text-[14px] leading-snug font-bold text-white uppercase no-underline"
+          className="mt-6 w-fit max-w-full shrink-0 self-start rounded-lg bg-[#0F6E6E] px-3 py-2 text-center text-[14px] leading-snug font-bold text-white uppercase no-underline"
         >
           Schedule a Free Consultation
         </Link>
