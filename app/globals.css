@@ -166,4 +166,28 @@ main section {
     max-height: 250px;
     object-fit: cover;
   }
+
+  .media-frame > img[alt="Elderly woman portrait"] {
+    object-position: center 25%;
+  }
+
+  .media-frame > img[alt="Senior woman on porch"] {
+    object-position: center 45%;
+  }
+
+  .media-frame > img[alt="Elderly couple in living room"] {
+    object-position: center 40%;
+  }
+
+  .media-frame > img[alt="Hands held together"] {
+    object-position: center 50%;
+  }
+
+  .media-frame > img[alt="Woman in wheelchair in kitchen"] {
+    object-position: center 40%;
+  }
+
+  .media-frame > img[alt="Caregiver showing phone to seniors"] {
+    object-position: center 20%;
+  }
 }
