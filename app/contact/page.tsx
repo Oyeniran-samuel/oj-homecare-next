@@ -108,7 +108,7 @@ export default function ContactPage() {
             {" "}
           </div>
           {" "}
-          <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
+          <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
             <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0F6E6E] uppercase not-italic"}>{"DID YOU KNOW?"}</p>
             <p className={"mt-0 mb-0"}>{"“90% of Americans over 65 say they want to remain in their own home as they age. OJ Home Care makes that wish a reality, safely and with heart.”"}
             </p>

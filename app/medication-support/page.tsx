@@ -127,7 +127,7 @@ export default function MedicationSupportPage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
+        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
           <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0F6E6E] uppercase not-italic"}>{"DID YOU KNOW?"}</p>
             <p className={"mt-0 mb-0"}>{"“Medication errors account for over 125,000 deaths annually in the U.S. Proper in-home medication support is one of the most critical parts of elder care.”"}
             </p>

@@ -53,13 +53,13 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-[15px] max-[767px]:gap-2.5">
             {serviceLinks.map(([label, href]) => (
-              <a
+              <Link
                 key={label}
                 href={href}
                 className="text-[#C6D5D9] no-underline transition-colors hover:text-[#0F6E6E]"
               >
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -70,13 +70,13 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-[15px] max-[767px]:gap-2.5">
             {companyLinks.map(([label, href]) => (
-              <a
+              <Link
                 key={label}
                 href={href}
                 className="text-[#C6D5D9] no-underline transition-colors hover:text-[#0F6E6E]"
               >
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

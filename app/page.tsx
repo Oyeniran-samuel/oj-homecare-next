@@ -38,7 +38,7 @@ export default function Home() {
         <div className="relative w-full shrink-0 overflow-hidden">
           <Image
             className="block h-auto w-full"
-            src="/images/home-hero.png"
+            src="/images/home-hero.webp"
             alt="Caregiver and senior in living room"
             width={1785}
             height={881}

@@ -127,7 +127,7 @@ export default function ChronicCarePage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
+        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
           <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0F6E6E] uppercase not-italic"}>{"DID YOU KNOW?"}</p>
             <p className={"mt-0 mb-0"}>{"“Nearly 1 in 5 Medicare patients are readmitted to hospital within 30 days of discharge. Professional transitional care at home cuts that risk significantly.”"}
             </p>

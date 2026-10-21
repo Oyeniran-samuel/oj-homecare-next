@@ -73,22 +73,22 @@ function Dropdown({
 }) {
   return (
     <span className="group relative inline-block">
-      <a
+      <Link
         href={href}
         aria-haspopup="true"
         className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
       >
         {title}
-      </a>
+      </Link>
       <span className="absolute top-full left-0 z-[200] hidden min-w-[250px] rounded-b-lg bg-[#092D3C] py-2 group-hover:block group-focus-within:block">
         {links.map(([label, url]) => (
-          <a
+          <Link
             key={label}
             href={url}
             className="block whitespace-nowrap px-[18px] py-2.5 text-[15px] text-white no-underline hover:bg-[#0F6E6E]"
           >
             {label}
-          </a>
+          </Link>
         ))}
       </span>
     </span>
@@ -206,14 +206,14 @@ export default function Header() {
                   </svg>
                 </button>
               ) : (
-                <a
+                <Link
                   href={href}
                   onClick={closeMenu}
                   tabIndex={menuOpen ? 0 : -1}
                   className="block text-[1.1rem] font-semibold tracking-[1px] text-white uppercase no-underline"
                 >
                   {label}
-                </a>
+                </Link>
               )}
               {children.length > 0 && (
                 <div
@@ -224,16 +224,16 @@ export default function Header() {
                 >
                   <div className="overflow-hidden">
                     <div className="mt-2 ml-4 flex flex-col gap-2 border-l border-white/15 pl-3">
-                      <a
+                      <Link
                         href={href}
                         onClick={closeMenu}
                         tabIndex={menuOpen ? 0 : -1}
                         className="block text-[0.8rem] font-medium text-[#C6D5D9] no-underline"
                       >
                         Overview
-                      </a>
+                      </Link>
                       {children.map(([childLabel, childHref]) => (
-                        <a
+                        <Link
                           key={childLabel}
                           href={childHref}
                           onClick={closeMenu}
@@ -241,7 +241,7 @@ export default function Header() {
                           className="block text-[0.8rem] font-normal text-[#7FB5AE] no-underline"
                         >
                           {childLabel}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
