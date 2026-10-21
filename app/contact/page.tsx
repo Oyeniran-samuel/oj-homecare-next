@@ -103,7 +103,7 @@ export default function ContactPage() {
             </div>
             {" "}
             <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-              <Image src={"/images/contact-caregiver-consultation.jpg"} alt={"Caregiver showing phone to seniors"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1620} />
+              <Image src={"/images/contact-caregiver-consultation.jpg"} alt={"Caregiver showing phone to seniors"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1620} />
             </div>
             {" "}
           </div>

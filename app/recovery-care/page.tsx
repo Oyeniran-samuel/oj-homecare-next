@@ -122,7 +122,7 @@ export default function RecoveryCarePage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/recovery-care-dog.jpg"} alt={"Dog comforting patient in bed"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={764} />
+            <Image src={"/images/recovery-care-dog.jpg"} alt={"Dog comforting patient in bed"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={764} />
           </div>
           {" "}
         </div>
@@ -210,7 +210,7 @@ export default function RecoveryCarePage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/recovery-care-wheelchair.jpg"} alt={"Woman in wheelchair in kitchen"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1625} />
+            <Image src={"/images/recovery-care-wheelchair.jpg"} alt={"Woman in wheelchair in kitchen"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1625} />
           </div>
           {" "}
         </div>

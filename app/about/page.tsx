@@ -58,7 +58,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"relative w-full overflow-hidden aspect-[0.49] md:self-start md:basis-[34%] max-[767px]:mt-6"}>
-            <Image src={"/images/about-founder.jpg"} alt={"Founder portrait"} className={"absolute inset-0 h-full w-full object-cover object-[40%_center] max-w-full"} width={1080} height={608} />
+            <Image src={"/images/about-founder.jpg"} alt={"Founder portrait"} className={"absolute inset-0 h-full w-full object-cover object-[40%_center] max-w-full"} sizes="(min-width: 768px) 34vw, 100vw" width={1080} height={608} />
           </div>
           {" "}
         </div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/about-family-care.jpg"} alt={"Smiling senior woman with family"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={720} />
+            <Image src={"/images/about-family-care.jpg"} alt={"Smiling senior woman with family"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={720} />
           </div>
           {" "}
         </div>
@@ -240,7 +240,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/about-senior-with-flowers.jpg"} alt={"Elderly woman with flower basket"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1558} />
+            <Image src={"/images/about-senior-with-flowers.jpg"} alt={"Elderly woman with flower basket"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1558} />
           </div>
           {" "}
         </div>
@@ -328,7 +328,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/about-senior-on-porch.jpg"} alt={"Senior woman on porch"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1921} />
+            <Image src={"/images/about-senior-on-porch.jpg"} alt={"Senior woman on porch"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1921} />
           </div>
           {" "}
         </div>
@@ -440,7 +440,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/about-nurse-explaining-care.jpg"} alt={"Nurse explaining document"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={721} />
+            <Image src={"/images/about-nurse-explaining-care.jpg"} alt={"Nurse explaining document"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={721} />
           </div>
           {" "}
         </div>
@@ -558,7 +558,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/about-family-consultation.jpg"} alt={"Doctor consulting family at desk"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1631} />
+            <Image src={"/images/about-family-consultation.jpg"} alt={"Doctor consulting family at desk"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1631} />
           </div>
           {" "}
         </div>
@@ -667,7 +667,7 @@ export default function AboutPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/about-caregiver-phone.jpg"} alt={"Caregiver showing senior a phone"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={720} />
+            <Image src={"/images/about-caregiver-phone.jpg"} alt={"Caregiver showing senior a phone"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={720} />
           </div>
           {" "}
         </div>

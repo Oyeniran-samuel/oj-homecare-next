@@ -23,7 +23,7 @@ export default function ServicesPage() {
           {"Care Services"}
         </h2>
         {" "}
-        <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+        <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
           {"Select a service to read the full details."}
         </p>
         {" "}
@@ -32,7 +32,7 @@ export default function ServicesPage() {
           <Link href={"/personal-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/personal-care-senior-outdoors.jpg')"} as CSSProperties}>
-              <Image src={"/images/personal-care-senior-outdoors.jpg"} alt={"Personal care caregiver with client"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
+              <Image src={"/images/personal-care-senior-outdoors.jpg"} alt={"Personal care caregiver with client"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={720} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Our personal care services support daily living with warmth and professionalism. Whether assistance is needed for a few hours or around the clock, our caregivers provide dignified, respectful help with everyday activities."}
             </p>
             {" "}
@@ -59,7 +59,7 @@ export default function ServicesPage() {
           <Link href={"/companion-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/companion-care-mahjong.jpg')"} as CSSProperties}>
-              <Image src={"/images/companion-care-mahjong.jpg"} alt={"Companion caregiver spending time with client"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
+              <Image src={"/images/companion-care-mahjong.jpg"} alt={"Companion caregiver spending time with client"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={720} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -73,7 +73,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Loneliness and isolation are among the greatest health threats facing older adults. Our companion care services provide consistent, meaningful social engagement that lifts mood, sharpens the mind, and strengthens emotional well-being."}
             </p>
             {" "}
@@ -86,7 +86,7 @@ export default function ServicesPage() {
           <Link href={"/memory-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/memory-care-chess.jpg')"} as CSSProperties}>
-              <Image src={"/images/memory-care-chess.jpg"} alt={"Caregiver supporting client with memory loss"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={608} />
+              <Image src={"/images/memory-care-chess.jpg"} alt={"Caregiver supporting client with memory loss"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={608} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Caring for a loved one with Alzheimer's or dementia requires specialized knowledge, patience, and a deeply compassionate approach. Our trained caregivers provide expert, person-centered support for every stage of memory loss."}
             </p>
             {" "}
@@ -113,7 +113,7 @@ export default function ServicesPage() {
           <Link href={"/cognitive-wellness"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/cognitive-wellness-senior-man.jpg')"} as CSSProperties}>
-              <Image src={"/images/cognitive-wellness-senior-man.jpg"} alt={"Cognitive wellness activity with client"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
+              <Image src={"/images/cognitive-wellness-senior-man.jpg"} alt={"Cognitive wellness activity with client"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={720} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -127,7 +127,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Cognitive engagement is one of the most powerful tools in memory care. Our structured activity programs are designed to stimulate the mind, reduce cognitive decline, and bring daily moments of joy and accomplishment."}
             </p>
             {" "}
@@ -140,7 +140,7 @@ export default function ServicesPage() {
           <Link href={"/recovery-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/recovery-care-dog.jpg')"} as CSSProperties}>
-              <Image src={"/images/recovery-care-dog.jpg"} alt={"Caregiver supporting recovery at home"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={764} />
+              <Image src={"/images/recovery-care-dog.jpg"} alt={"Caregiver supporting recovery at home"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={764} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -154,7 +154,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"The transition from hospital to home is one of the most vulnerable moments for older adults. OJ Home Care provides expert recovery support that reduces rehospitalization risk and speeds healing in the comfort of home."}
             </p>
             {" "}
@@ -167,7 +167,7 @@ export default function ServicesPage() {
           <Link href={"/chronic-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/chronic-care-senior-with-flowers.jpg')"} as CSSProperties}>
-              <Image src={"/images/chronic-care-senior-with-flowers.jpg"} alt={"Caregiver supporting chronic condition management"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={1620} />
+              <Image src={"/images/chronic-care-senior-with-flowers.jpg"} alt={"Caregiver supporting chronic condition management"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={1620} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -181,7 +181,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Living with a chronic condition doesn't have to mean living with limitations. Our caregivers are trained to support clients with diabetes, heart disease, COPD, arthritis, and other ongoing conditions — enabling confident, independent living at home."}
             </p>
             {" "}
@@ -194,7 +194,7 @@ export default function ServicesPage() {
           <Link href={"/respite-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/respite-care-flowers.jpg')"} as CSSProperties}>
-              <Image src={"/images/respite-care-flowers.jpg"} alt={"Respite caregiver with family"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
+              <Image src={"/images/respite-care-flowers.jpg"} alt={"Respite caregiver with family"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={720} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -208,7 +208,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Family caregivers give everything — and they deserve rest too. OJ Home Care's respite services provide reliable, professional coverage so family members can recharge, knowing their loved one is in trusted, capable hands."}
             </p>
             {" "}
@@ -221,7 +221,7 @@ export default function ServicesPage() {
           <Link href={"/medication-support"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
             <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/medication-support-pills.jpg')"} as CSSProperties}>
-              <Image src={"/images/medication-support-pills.jpg"} alt={"Caregiver helping with medication"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
+              <Image src={"/images/medication-support-pills.jpg"} alt={"Caregiver helping with medication"} className={"relative block h-full w-full object-cover max-w-full"} sizes={"(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"} width={1080} height={720} />
             </span>
             {" "}
             <div className={"flex items-center gap-3"}><span className={"flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#DFF0F0] text-[#0D7377] [&_svg]:h-7 [&_svg]:w-7 max-[767px]:h-12 max-[767px]:w-12 max-[767px]:[&_svg]:h-6 max-[767px]:[&_svg]:w-6"}>
@@ -235,7 +235,7 @@ export default function ServicesPage() {
             </h3>
             </div>
             {" "}
-            <p className={"mt-0 mb-4 text-[#5A6D74]"}>
+            <p className={"mt-0 mb-4 text-[#5A6D74] xl:line-clamp-3"}>
               {"Medication errors are among the leading causes of hospitalizations in older adults. Our caregivers provide careful, consistent medication support — ensuring every dose is taken correctly, on time, and safely documented."}
             </p>
             {" "}

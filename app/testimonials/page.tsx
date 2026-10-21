@@ -51,7 +51,7 @@ export default function TestimonialsPage() {
             </div>
             {" "}
             <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-              <Image src={"/images/testimonials-family.jpg"} alt={"Happy family on porch"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={720} />
+              <Image src={"/images/testimonials-family.jpg"} alt={"Happy family on porch"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={720} />
             </div>
             {" "}
           </div>

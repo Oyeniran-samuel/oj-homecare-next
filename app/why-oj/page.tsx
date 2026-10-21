@@ -116,7 +116,7 @@ export default function WhyOjPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/why-oj-hands.jpg"} alt={"Hands held together"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1620} />
+            <Image src={"/images/why-oj-hands.jpg"} alt={"Hands held together"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1620} />
           </div>
           {" "}
         </div>
@@ -202,7 +202,7 @@ export default function WhyOjPage() {
         </div>
         {" "}
         <div className={"mt-7"}>
-          <Image src={"/images/why-oj-care-activities.jpg"} alt={"Caregiver doing activities with seniors"} className={"block h-[380px] w-full rounded-xl object-cover max-[1100px]:h-[260px] max-[767px]:h-[220px]"} width={1080} height={764} />
+          <Image src={"/images/why-oj-care-activities.jpg"} alt={"Caregiver doing activities with seniors"} className={"block h-[380px] w-full rounded-xl object-cover max-[1100px]:h-[260px] max-[767px]:h-[220px]"} sizes="100vw" width={1080} height={764} />
         </div>
         {" "}
         <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
@@ -276,7 +276,7 @@ export default function WhyOjPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/why-oj-senior-woman.jpg"} alt={"Elderly woman portrait"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1620} />
+            <Image src={"/images/why-oj-senior-woman.jpg"} alt={"Elderly woman portrait"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1620} />
           </div>
           {" "}
         </div>
@@ -392,7 +392,7 @@ export default function WhyOjPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/why-oj-senior-couple.jpg"} alt={"Elderly couple in living room"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1620} />
+            <Image src={"/images/why-oj-senior-couple.jpg"} alt={"Elderly couple in living room"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1620} />
           </div>
           {" "}
         </div>
@@ -508,7 +508,7 @@ export default function WhyOjPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/why-oj-family-hands.jpg"} alt={"Family holding hands in field"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={721} />
+            <Image src={"/images/why-oj-family-hands.jpg"} alt={"Family holding hands in field"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={721} />
           </div>
           {" "}
         </div>
@@ -620,7 +620,7 @@ export default function WhyOjPage() {
           </div>
           {" "}
           <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
-            <Image src={"/images/why-oj-care-technology.jpg"} alt={"Tablet with care app"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} width={1080} height={1562} />
+            <Image src={"/images/why-oj-care-technology.jpg"} alt={"Tablet with care app"} className={"absolute inset-0 h-full w-full object-cover object-top max-[767px]:static max-[767px]:h-auto max-[767px]:max-h-[360px] max-w-full"} sizes="(min-width: 768px) 42vw, 100vw" width={1080} height={1562} />
           </div>
           {" "}
         </div>

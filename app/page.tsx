@@ -53,6 +53,7 @@ export default function Home() {
               alt="OJ Home Care logo"
               width={52}
               height={52}
+              sizes="52px"
               className="mr-3 inline-block h-[52px] w-[52px] rounded-full bg-white object-cover align-middle"
             />
             <span className="inline-block text-left align-middle">
@@ -142,6 +143,7 @@ export default function Home() {
                 alt="Consultation on couch"
                 width={909}
                 height={1124}
+                sizes="(min-width: 768px) 42vw, 100vw"
                 className="max-w-full rounded-2xl object-contain max-[767px]:mt-6"
               />
             </div>
