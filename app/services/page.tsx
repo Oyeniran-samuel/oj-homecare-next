@@ -27,11 +27,11 @@ export default function ServicesPage() {
           {"Select a service to read the full details."}
         </p>
         {" "}
-        <div className={"mt-6 grid grid-cols-3 gap-8 max-[1023px]:grid-cols-2 max-[767px]:grid-cols-1 max-[767px]:gap-6"}>
+        <div className={"mt-6 grid grid-cols-3 gap-8 max-[1023px]:grid-cols-2 max-[767px]:grid-cols-1 max-[767px]:gap-6 xl:grid-cols-4 xl:gap-6"}>
           {" "}
-          <Link href={"/personal-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/personal-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/personal-care-senior-outdoors.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/personal-care-senior-outdoors.jpg')"} as CSSProperties}>
               <Image src={"/images/personal-care-senior-outdoors.jpg"} alt={"Personal care caregiver with client"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
             </span>
             {" "}
@@ -56,9 +56,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/companion-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/companion-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/companion-care-mahjong.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/companion-care-mahjong.jpg')"} as CSSProperties}>
               <Image src={"/images/companion-care-mahjong.jpg"} alt={"Companion caregiver spending time with client"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
             </span>
             {" "}
@@ -83,9 +83,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/memory-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/memory-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/memory-care-chess.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/memory-care-chess.jpg')"} as CSSProperties}>
               <Image src={"/images/memory-care-chess.jpg"} alt={"Caregiver supporting client with memory loss"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={608} />
             </span>
             {" "}
@@ -110,9 +110,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/cognitive-wellness"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/cognitive-wellness"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/cognitive-wellness-senior-man.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/cognitive-wellness-senior-man.jpg')"} as CSSProperties}>
               <Image src={"/images/cognitive-wellness-senior-man.jpg"} alt={"Cognitive wellness activity with client"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
             </span>
             {" "}
@@ -137,9 +137,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/recovery-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/recovery-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/recovery-care-dog.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/recovery-care-dog.jpg')"} as CSSProperties}>
               <Image src={"/images/recovery-care-dog.jpg"} alt={"Caregiver supporting recovery at home"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={764} />
             </span>
             {" "}
@@ -164,9 +164,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/chronic-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/chronic-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/chronic-care-senior-with-flowers.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/chronic-care-senior-with-flowers.jpg')"} as CSSProperties}>
               <Image src={"/images/chronic-care-senior-with-flowers.jpg"} alt={"Caregiver supporting chronic condition management"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={1620} />
             </span>
             {" "}
@@ -191,9 +191,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/respite-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/respite-care"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/respite-care-flowers.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/respite-care-flowers.jpg')"} as CSSProperties}>
               <Image src={"/images/respite-care-flowers.jpg"} alt={"Respite caregiver with family"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
             </span>
             {" "}
@@ -218,9 +218,9 @@ export default function ServicesPage() {
             {" "}
           </Link>
           {" "}
-          <Link href={"/medication-support"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-7 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
+          <Link href={"/medication-support"} className={"flex h-full w-full min-w-0 flex-col rounded-xl border border-[#E6ECEF] bg-white px-6 py-5 text-[#092D3C] no-underline shadow-[0_8px_24px_rgba(9,45,60,0.10)] transition-all hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(9,45,60,0.14)] [&_p.sub]:ml-[60px]"}>
             {" "}
-            <span className={"relative -mx-6 -mt-7 mb-5 block h-[220px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/medication-support-pills.jpg')"} as CSSProperties}>
+            <span className={"relative -mx-6 -mt-5 mb-5 block h-[160px] w-[calc(100%+3rem)] shrink-0 overflow-hidden rounded-t-xl before:absolute before:-inset-2.5 before:scale-105 before:bg-[image:var(--svc-image)] before:bg-cover before:bg-center before:blur-lg before:content-['']"} style={{"--svc-image": "url('/images/medication-support-pills.jpg')"} as CSSProperties}>
               <Image src={"/images/medication-support-pills.jpg"} alt={"Caregiver helping with medication"} className={"relative block h-full w-full object-cover max-w-full"} width={1080} height={720} />
             </span>
             {" "}

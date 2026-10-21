@@ -38,17 +38,12 @@ export default function Home() {
         <div className="relative w-full shrink-0 overflow-hidden">
           <Image
             className="block h-auto w-full"
-            src="/images/home-hero.jpg"
+            src="/images/home-hero.png"
             alt="Caregiver and senior in living room"
-            width={2813}
-            height={1389}
+            width={1785}
+            height={881}
             sizes="100vw"
-            unoptimized
             priority
-            style={{
-              filter:
-                'url("/hero-sharpen.svg#sharpen") contrast(1.05) saturate(1.05)',
-            }}
           />
         </div>
         <div className="flex-1 bg-[#092D3C] px-5 py-10 text-center text-white max-[767px]:flex-none">

@@ -155,6 +155,7 @@ main section {
   main div:has(> .media-frame) > .media-frame {
     order: -1;
     margin-top: 0;
+    min-height: 0;
   }
 
   .media-frame > img:not([alt="Founder portrait"]) {
@@ -162,7 +163,7 @@ main section {
     display: block;
     width: 100%;
     height: auto;
-    max-height: none;
-    object-fit: contain;
+    max-height: 250px;
+    object-fit: cover;
   }
 }
