@@ -127,9 +127,10 @@ export default function RecoveryCarePage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"Music reaches parts of the mind that words cannot. We have seen clients light up during familiar songs who hadn't spoken in weeks. — OJ Home Care Caregiver"}
-        </div>
+        <blockquote className={"editorial-quote mt-7"}>
+          <p>Music reaches parts of the mind that words cannot. We have seen clients light up during familiar songs who hadn&apos;t spoken in weeks.</p>
+          <footer><cite>OJ Home Care Caregiver</cite></footer>
+        </blockquote>
         {" "}
       </div>
       {" "}

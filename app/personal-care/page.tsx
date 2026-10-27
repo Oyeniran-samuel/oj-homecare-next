@@ -127,9 +127,10 @@ export default function PersonalCarePage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"Knowing someone is watching over Dad with the same care I would. That peace of mind is priceless. — Son of OJ Home Care Client"}
-        </div>
+        <blockquote className={"editorial-quote mt-7"}>
+          <p>Knowing someone is watching over Dad with the same care I would. That peace of mind is priceless.</p>
+          <footer><cite>Son of OJ Home Care Client</cite></footer>
+        </blockquote>
         {" "}
       </div>
       {" "}

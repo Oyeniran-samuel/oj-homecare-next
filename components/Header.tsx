@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const whyLinks = [
   ["Why Families Choose Us", "/why-oj#why-families"],
@@ -98,15 +98,17 @@ function Dropdown({
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   function closeMenu() {
     setMenuOpen(false);
     setOpenSection(null);
+    menuButtonRef.current?.focus();
   }
 
   return (
     <header className="sticky top-0 z-[1000]">
-      <nav className="w-full bg-[#092D3C] py-4">
+      <nav className="w-full border-b border-white/10 bg-[#092D3C] py-4 shadow-[0_8px_24px_rgba(9,45,60,0.12)]">
         <div className="mx-auto flex w-full max-w-[1300px] items-center justify-between px-10 max-[1100px]:px-6 max-[420px]:px-4">
           <Brand />
           <div className="hidden items-center gap-4 min-[1101px]:flex">
@@ -132,18 +134,19 @@ export default function Header() {
             <Dropdown title="About Us" href="/about" links={aboutLinks} />
             <Link
               href="/contact"
-              className="whitespace-nowrap rounded-lg bg-[#0D7377] px-4 py-2.5 font-semibold text-white no-underline transition-colors hover:bg-[#0B5656] max-[1399px]:text-[13px]"
+              className="whitespace-nowrap rounded-full bg-[#0D7377] px-5 py-2.5 font-semibold text-white no-underline shadow-[0_5px_16px_rgba(0,0,0,0.14)] transition-colors hover:bg-[#0B5656] max-[1399px]:text-[13px]"
             >
               Schedule a Free Consultation
             </Link>
           </div>
           <button
+            ref={menuButtonRef}
             type="button"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setMenuOpen((open) => !open)}
-            className="hidden cursor-pointer border-0 bg-transparent p-2 text-[28px] leading-none text-white max-[1100px]:block"
+            className="hidden size-11 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-white/10 p-2 text-[24px] leading-none text-white transition-colors hover:bg-white/15 max-[1100px]:flex"
           >
             &#9776;
           </button>
@@ -159,106 +162,114 @@ export default function Header() {
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       />
-      <aside
-        id="mobile-navigation"
-        aria-label="Mobile navigation"
-        aria-hidden={!menuOpen}
-        inert={!menuOpen}
-        className={`fixed top-0 right-0 z-[9999] flex h-dvh w-[250px] max-w-[68%] flex-col bg-[#1A2E35] p-7 transition-transform duration-300 ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
+      <div
+        className={`fixed inset-0 z-[9999] overflow-clip ${
+          menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        <button
-          type="button"
-          onClick={closeMenu}
-          aria-label="Close navigation menu"
-          tabIndex={menuOpen ? 0 : -1}
-          className="flex size-10 self-end items-center justify-center rounded-lg border border-white/30 bg-transparent p-0 text-3xl leading-none text-white"
+        <aside
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          aria-hidden={!menuOpen}
+          inert={!menuOpen}
+          className={`absolute top-0 right-0 h-dvh flex-col bg-[#1A2E35] ${
+            menuOpen
+              ? "mobile-navigation-panel flex w-[250px] max-w-[68%] p-7"
+              : "hidden"
+          }`}
         >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div className="mt-[48px] flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto overscroll-contain pr-1">
-          {mobileLinks.map(([label, href, children]) => (
-            <div key={label}>
-              {children.length > 0 ? (
-                <button
-                  type="button"
-                  onClick={() => setOpenSection(openSection === label ? null : label)}
-                  aria-expanded={openSection === label}
-                  aria-controls={`mobile-submenu-${label}`}
-                  tabIndex={menuOpen ? 0 : -1}
-                  className="flex w-full items-center justify-between gap-3 text-left text-[1.1rem] font-semibold tracking-[1px] text-white uppercase"
-                >
-                  {label}
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    className={`h-4 w-4 shrink-0 transition-transform duration-300 ease-out ${
-                      openSection === label ? "rotate-180" : ""
+          <button
+            type="button"
+            onClick={closeMenu}
+            aria-label="Close navigation menu"
+            tabIndex={menuOpen ? 0 : -1}
+            className="flex size-10 self-end items-center justify-center rounded-lg border border-white/30 bg-transparent p-0 text-3xl leading-none text-white"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div className="mt-[48px] flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto overscroll-contain pr-1">
+            {mobileLinks.map(([label, href, children]) => (
+              <div key={label}>
+                {children.length > 0 ? (
+                  <button
+                    type="button"
+                    onClick={() => setOpenSection(openSection === label ? null : label)}
+                    aria-expanded={openSection === label}
+                    aria-controls={`mobile-submenu-${label}`}
+                    tabIndex={menuOpen ? 0 : -1}
+                    className="flex w-full items-center justify-between gap-3 text-left text-[1.1rem] font-semibold tracking-[1px] text-white uppercase"
+                  >
+                    {label}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      className={`h-4 w-4 shrink-0 transition-transform duration-300 ease-out ${
+                        openSection === label ? "rotate-180" : ""
+                      }`}
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </button>
+                ) : (
+                  <Link
+                    href={href}
+                    onClick={closeMenu}
+                    tabIndex={menuOpen ? 0 : -1}
+                    className="block text-[1.1rem] font-semibold tracking-[1px] text-white uppercase no-underline"
+                  >
+                    {label}
+                  </Link>
+                )}
+                {children.length > 0 && (
+                  <div
+                    id={`mobile-submenu-${label}`}
+                    className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                      openSection === label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                     }`}
                   >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </button>
-              ) : (
-                <Link
-                  href={href}
-                  onClick={closeMenu}
-                  tabIndex={menuOpen ? 0 : -1}
-                  className="block text-[1.1rem] font-semibold tracking-[1px] text-white uppercase no-underline"
-                >
-                  {label}
-                </Link>
-              )}
-              {children.length > 0 && (
-                <div
-                  id={`mobile-submenu-${label}`}
-                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-                    openSection === label ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="mt-2 ml-4 flex flex-col gap-2 border-l border-white/15 pl-3">
-                      <Link
-                        href={href}
-                        onClick={closeMenu}
-                        tabIndex={menuOpen ? 0 : -1}
-                        className="block text-[0.8rem] font-medium text-[#C6D5D9] no-underline"
-                      >
-                        Overview
-                      </Link>
-                      {children.map(([childLabel, childHref]) => (
+                    <div className="overflow-hidden">
+                      <div className="mt-2 ml-4 flex flex-col gap-2 border-l border-white/15 pl-3">
                         <Link
-                          key={childLabel}
-                          href={childHref}
+                          href={href}
                           onClick={closeMenu}
                           tabIndex={menuOpen ? 0 : -1}
-                          className="block text-[0.8rem] font-normal text-[#7FB5AE] no-underline"
+                          className="block text-[0.8rem] font-medium text-[#C6D5D9] no-underline"
                         >
-                          {childLabel}
+                          Overview
                         </Link>
-                      ))}
+                        {children.map(([childLabel, childHref]) => (
+                          <Link
+                            key={childLabel}
+                            href={childHref}
+                            onClick={closeMenu}
+                            tabIndex={menuOpen ? 0 : -1}
+                            className="block text-[0.8rem] font-normal text-[#7FB5AE] no-underline"
+                          >
+                            {childLabel}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        <Link
-          href="/contact"
-          onClick={closeMenu}
-          tabIndex={menuOpen ? 0 : -1}
-          className="mt-6 w-fit max-w-full shrink-0 self-start rounded-lg bg-[#0F6E6E] px-3 py-2 text-center text-[14px] leading-snug font-bold text-white uppercase no-underline"
-        >
-          Schedule a Free Consultation
-        </Link>
-      </aside>
+                )}
+              </div>
+            ))}
+          </div>
+          <Link
+            href="/contact"
+            onClick={closeMenu}
+            tabIndex={menuOpen ? 0 : -1}
+            className="mt-6 w-fit max-w-full shrink-0 self-start rounded-lg bg-[#0F6E6E] px-3 py-2 text-center text-[14px] leading-snug font-bold text-white uppercase no-underline"
+          >
+            Schedule a Free Consultation
+          </Link>
+        </aside>
+      </div>
     </header>
   );
 }

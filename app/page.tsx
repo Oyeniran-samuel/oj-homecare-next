@@ -10,23 +10,23 @@ const stats = [
 
 const onboardingSteps = [
   [
-    "1 Free Consultation",
+    "Free Consultation",
     "A no-obligation call with our care team to discuss your loved one's needs, preferences, and goals.",
   ],
   [
-    "2 In-Home Assessment",
+    "In-Home Assessment",
     "A thorough home visit to evaluate care requirements, safety considerations, and family dynamics.",
   ],
   [
-    "3 Personalized Care Plan",
+    "Personalized Care Plan",
     "We create a detailed, individualized care plan reviewed and approved by the family.",
   ],
   [
-    "4 Caregiver Matching",
+    "Caregiver Matching",
     "We select and introduce the best-fit caregiver based on skills, personality, and availability.",
   ],
   [
-    "5 Care Begins",
+    "Care Begins",
     "Your dedicated caregiver starts service, with a supervisor present on day one for a smooth introduction.",
   ],
 ];
@@ -34,8 +34,8 @@ const onboardingSteps = [
 export default function Home() {
   return (
     <>
-      <section id="hero" className="flex min-h-[calc(100svh-84px)] flex-col bg-[#092D3C] max-[767px]:min-h-0 max-[420px]:min-h-0">
-        <div className="relative w-full shrink-0 overflow-hidden">
+      <section id="hero" className="homepage-hero flex min-h-[calc(100svh-84px)] flex-col bg-[#092D3C] max-[767px]:min-h-0 max-[420px]:min-h-0">
+        <div className="homepage-hero-image relative w-full shrink-0 overflow-hidden">
           <Image
             className="block h-auto w-full"
             src="/images/home-hero.webp"
@@ -46,37 +46,37 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="flex-1 bg-[#092D3C] px-5 py-10 text-center text-white max-[767px]:flex-none">
-          <p className="mb-4 text-[22px]">
+        <div className="homepage-hero-copy flex-1 bg-[linear-gradient(135deg,#0C3543_0%,#092D3C_58%,#072631_100%)] px-5 py-10 text-center text-white max-[767px]:flex-none max-[767px]:py-8">
+          <p className="mx-auto mb-5 flex w-fit items-center text-left text-[21px] leading-tight">
             <Image
               src="/images/oj-home-care-logo.jpg"
               alt="OJ Home Care logo"
               width={52}
               height={52}
               sizes="52px"
-              className="mr-3 inline-block h-[52px] w-[52px] rounded-full bg-white object-cover align-middle"
+              className="mr-3 inline-block h-[52px] w-[52px] rounded-full bg-white object-cover align-middle shadow-[0_0_0_3px_rgba(255,255,255,0.12)]"
             />
             <span className="inline-block text-left align-middle">
               OJ Home Care
-              <small className="block text-[15px] text-[#7FB5AE]">
+              <small className="mt-1 block text-[13px] tracking-wide text-[#B8D5D0]">
                 Caring Hearts, Helping Hands
               </small>
             </span>
           </p>
-          <p className="mb-2 text-[13px] font-semibold tracking-[2px] text-[#0D7377] uppercase">
+          <p className="mb-2 text-[12px] font-semibold tracking-[2.4px] text-[#91C9BE] uppercase">
             Premium At-Home Care
           </p>
-          <h1 className="mx-auto mb-4 max-w-4xl text-[44px] leading-[1.15] font-bold max-[767px]:text-[31px] max-[420px]:text-[clamp(28px,8vw,34px)]">
+          <h1 className="mx-auto mb-4 max-w-4xl text-[clamp(38px,5.2vw,68px)] leading-[1.08] font-semibold tracking-[-0.045em] max-[767px]:text-[clamp(32px,8vw,42px)]">
             Care That Feels Like Family
           </h1>
-          <p className="mx-auto mb-6 max-w-3xl">
+          <p className="mx-auto mb-7 max-w-[680px] text-[16px] leading-[1.8] text-white/85 max-[767px]:text-[15px]">
             Compassionate, professional home care services tailored to your
             loved one&apos;s unique needs — in the comfort and familiarity of
             home.
           </p>
           <p>
             <a
-              className="inline-block max-w-full rounded-lg bg-[#0D7377] px-4 py-2.5 font-semibold text-white no-underline transition-colors hover:bg-[#0B5656]"
+              className="inline-block max-w-full rounded-full bg-[#0D7377] px-6 py-3 text-[15px] font-semibold text-white no-underline shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-colors hover:bg-[#0B5656]"
               href="tel:+14047160100"
             >
               Schedule a Free Consultation
@@ -85,26 +85,27 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-[#F5F7FA] px-3 py-3 text-center text-sm">
-        <b className="text-[#0D7377]">100%</b> Client Retention
-        &nbsp;&nbsp; <b className="text-[#0D7377]">4.9 ★</b> Client Rating
-        &nbsp;&nbsp; <b className="text-[#0D7377]">100%</b> Licensed &amp;
-        Insured &nbsp;&nbsp; <b className="text-[#0D7377]">24/7</b> Care
-        Available
+      <div className="homepage-trust-strip border-b border-[#E6ECEF] bg-[#F7FAFA] px-5 py-4">
+        <div className="mx-auto grid max-w-[1100px] grid-cols-4 gap-3 text-center text-[13px] max-[767px]:grid-cols-2 max-[420px]:gap-2">
+          <p className="my-0"><b className="mr-1 text-[#0D7377]">100%</b> Client Retention</p>
+          <p className="my-0"><b className="mr-1 text-[#0D7377]">4.9 ★</b> Client Rating</p>
+          <p className="my-0"><b className="mr-1 text-[#0D7377]">100%</b> Licensed &amp; Insured</p>
+          <p className="my-0"><b className="mr-1 text-[#0D7377]">24/7</b> Care Available</p>
+        </div>
       </div>
 
       <section
         id="index-stats"
-        className="mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] bg-[#F5F7F9] px-12 py-14 max-[767px]:px-5 max-[767px]:py-9"
+        className="homepage-stats mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] bg-[#F5F7F9] px-12 py-14 max-[767px]:px-5 max-[767px]:py-9"
       >
         <div className="grid grid-cols-4 gap-3 text-center max-[767px]:grid-cols-2 max-[420px]:gap-2">
           {stats.map(([value, label]) => (
             <div
               key={label}
-              className="border border-[#E6ECEF] bg-white px-2 py-4 shadow-[0_2px_8px_rgba(9,45,60,0.06)] max-[420px]:px-1.5"
+              className="rounded-2xl border border-[#E4ECEC] bg-white px-2 py-5 shadow-[0_8px_24px_rgba(9,45,60,0.055)] max-[420px]:rounded-xl max-[420px]:px-1.5"
             >
-              <b className="block text-[26px] text-[#0D7377]">{value}</b>
-              <span className="text-[13px]">{label}</span>
+              <b className="block text-[30px] leading-tight tracking-[-0.03em] text-[#0D7377] max-[420px]:text-[25px]">{value}</b>
+              <span className="text-[13px] text-[#53676D]">{label}</span>
             </div>
           ))}
         </div>
@@ -112,7 +113,7 @@ export default function Home() {
 
       <section
         id="about-preview"
-        className="mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] px-12 py-14 text-center max-[767px]:px-5 max-[767px]:py-9"
+        className="homepage-about mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] px-12 py-14 text-center max-[767px]:px-5 max-[767px]:py-9"
       >
         <p className="mb-2 text-[13px] font-semibold tracking-[2px] text-[#0D7377] uppercase">
           Who We Are
@@ -121,7 +122,7 @@ export default function Home() {
           About OJ Home Care
           <span className="mx-auto mt-2.5 block h-1 w-14 bg-[#0D7377]" />
         </h2>
-        <p className="mx-auto mb-6 max-w-3xl text-lg">
+        <p className="mx-auto mb-6 max-w-3xl text-[17px] leading-[1.8] text-[#52666D] max-[767px]:text-[15px]">
           OJ Home Care is a licensed, Medicare-certified home care agency
           dedicated to helping individuals live safely, comfortably, and
           independently in their own homes.
@@ -134,7 +135,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <section id="getting-started">
+      <section id="getting-started" className="homepage-onboarding">
         <div className="mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] px-12 py-14 max-[767px]:px-5 max-[767px]:py-9">
           <div className="grid grid-cols-[42%_58%] gap-0 max-[767px]:grid-cols-1">
             <div className="order-1">
@@ -162,39 +163,41 @@ export default function Home() {
                 care and beyond.
               </p>
               {onboardingSteps.map(([title, description]) => (
-                <div key={title} className="py-3">
-                  <h3 className="mb-1 text-lg font-semibold">{title}</h3>
-                  <p className="text-[#5A6D74]">{description}</p>
+                <div key={title} className="border-l-2 border-[#D5E6E4] py-3 pl-4 transition-colors hover:border-[#0D7377]">
+                  <h3 className="mb-1 text-[16px] font-semibold tracking-[-0.01em]">{title}</h3>
+                  <p className="text-[14px] leading-[1.7] text-[#5A6D74]">{description}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic">
-            From the very first call they made us feel like family. The process
-            was clear, gentle, and exactly what we needed. — Client Family
-            Member
-          </div>
+          <blockquote className="editorial-quote mt-7">
+            <p>
+              From the very first call they made us feel like family. The
+              process was clear, gentle, and exactly what we needed.
+            </p>
+            <footer><cite>Client Family Member</cite></footer>
+          </blockquote>
         </div>
       </section>
 
-      <section className="mb-[60px] border-b border-white/15 bg-[#092D3C] px-5 pt-14 pb-[60px] text-center text-white">
+      <section className="homepage-closing-cta mb-[60px] border-b border-white/15 bg-[#092D3C] px-5 pt-14 pb-[60px] text-center text-white">
         <h2 className="mb-4 text-[34px] font-bold max-[767px]:text-2xl">
           Ready to Get Started?
         </h2>
-        <p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <Link
-            className="inline-block rounded-lg bg-[#0D7377] px-6 py-3 font-semibold text-white no-underline transition-colors hover:bg-[#0B5656]"
+            className="inline-block rounded-full bg-[#0D7377] px-7 py-3 font-semibold text-white no-underline shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-colors hover:bg-[#0B5656]"
             href="/contact"
           >
             Contact Us
           </Link>
           <a
-            className="inline-block px-5 py-2.5 text-inherit no-underline"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2.5 text-[15px] font-medium text-white no-underline transition-colors hover:border-white/60 hover:bg-white/5"
             href="tel:+14047160100"
           >
             (404) 716-0100
           </a>
-        </p>
+        </div>
       </section>
     </>
   );

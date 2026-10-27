@@ -32,22 +32,38 @@ export default function TestimonialsPage() {
                 {"Nothing speaks louder than the voices of the families we care for. Here is what our clients and their loved ones say about their experience with OJ Home Care."}
               </p>
               {" "}
-              <div id={"tCarousel"} tabIndex={0} className={"flex snap-x snap-mandatory gap-4 overflow-x-auto whitespace-normal [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&_.quote-box]:w-[82%] [&_.quote-box]:min-w-0 [&_.quote-box]:snap-start [&_.quote-box]:shrink-0"}>
+              <div id={"tCarousel"} role={"region"} aria-label={"Client testimonials"} aria-roledescription={"carousel"} tabIndex={0} className={"flex snap-x snap-mandatory gap-4 overflow-x-auto whitespace-normal [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&_.quote-box]:w-[82%] [&_.quote-box]:min-w-0 [&_.quote-box]:snap-start [&_.quote-box]:shrink-0"}>
                 {" "}
-                <div className={"quote-box mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-                  {"\"OJ Home Care gave my father back his independence. His caregiver treats him like family — we couldn't imagine life without her.\" — Margaret T. - Daughter of Client"}
-                </div>
+                <blockquote className={"quote-box editorial-quote mt-7"}>
+                  <p>
+                    “OJ Home Care gave my father back his independence. His
+                    caregiver treats him like family — we couldn&apos;t imagine
+                    life without her.”
+                  </p>
+                  <footer><cite>Margaret T. <span>Daughter of Client</span></cite></footer>
+                </blockquote>
                 {" "}
-                <div className={"quote-box mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-                  {"\"After my husband's stroke, we were overwhelmed. The team stepped in immediately and made everything feel manageable again.\" — James & Carol W. - Clients, 3 Years"}
-                </div>
+                <blockquote className={"quote-box editorial-quote mt-7"}>
+                  <p>
+                    “After my husband&apos;s stroke, we were overwhelmed. The
+                    team stepped in immediately and made everything feel
+                    manageable again.”
+                  </p>
+                  <footer><cite>James &amp; Carol W. <span>Clients, 3 Years</span></cite></footer>
+                </blockquote>
                 {" "}
-                <div className={"quote-box mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-                  {"\"The caregiver matching process was perfect. They understood exactly what my Mom needed — emotionally and physically.\" — David R. - Son of Client"}
-                </div>
+                <blockquote className={"quote-box editorial-quote mt-7"}>
+                  <p>
+                    “The caregiver matching process was perfect. They
+                    understood exactly what my Mom needed — emotionally and
+                    physically.”
+                  </p>
+                  <footer><cite>David R. <span>Son of Client</span></cite></footer>
+                </blockquote>
                 {" "}
               </div>
               {" "}
+              <TestimonialsAutoscroll />
             </div>
             {" "}
             <div className={"media-frame relative min-h-[300px] overflow-hidden max-[767px]:mt-6 md:basis-[42%]"}>
@@ -63,7 +79,6 @@ export default function TestimonialsPage() {
       {" "}
       {" "}
       {" "}
-      <TestimonialsAutoscroll />
     </>
   );
 }

@@ -103,9 +103,10 @@ export default function RespiteCarePage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"Family caregivers give everything they have. They deserve support too, not just their loved ones. — OJ Home Care Team"}
-        </div>
+        <blockquote className={"editorial-quote mt-7"}>
+          <p>Family caregivers give everything they have. They deserve support too, not just their loved ones.</p>
+          <footer><cite>OJ Home Care Team</cite></footer>
+        </blockquote>
         {" "}
       </div>
       {" "}

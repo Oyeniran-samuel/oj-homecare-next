@@ -121,9 +121,10 @@ export default function WhyOjPage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"Home care isn't just a service. It's a choice to keep living life on your own terms. — Care Advocate"}
-        </div>
+        <blockquote className={"editorial-quote mt-7"}>
+          <p>Home care isn&apos;t just a service. It&apos;s a choice to keep living life on your own terms.</p>
+          <footer><cite>Care Advocate</cite></footer>
+        </blockquote>
         {" "}
       </div>
       {" "}
@@ -205,7 +206,7 @@ export default function WhyOjPage() {
           <Image src={"/images/why-oj-care-activities.jpg"} alt={"Caregiver doing activities with seniors"} className={"block h-[380px] w-full rounded-xl object-cover max-[1100px]:h-[260px] max-[767px]:h-[220px]"} sizes="100vw" width={1080} height={764} />
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
+        <div className={"editorial-fact mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
           <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0F6E6E] uppercase not-italic"}>{"DID YOU KNOW?"}</p>
             <p className={"mt-0 mb-0"}>{"“Seniors who receive care at home recover up to 30% faster than those in facility settings, and report significantly higher satisfaction with their daily lives.”"}
             </p>
@@ -281,9 +282,10 @@ export default function WhyOjPage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"\"Our caregiver didn't just help Mom with her day — she gave her back her smile.\" — Client Family Member"}
-        </div>
+        <blockquote className={"editorial-quote mt-7"}>
+          <p>“Our caregiver didn&apos;t just help Mom with her day — she gave her back her smile.”</p>
+          <footer><cite>Client Family Member</cite></footer>
+        </blockquote>
         {" "}
       </div>
       {" "}
@@ -397,9 +399,10 @@ export default function WhyOjPage() {
           {" "}
         </div>
         {" "}
-        <div className={"mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-lg font-semibold text-[#287A45] italic"}>
-          {"The moment our caregiver walked in, Mom smiled. That told us everything we needed to know. — Client Family Member, Atlanta GA"}
-        </div>
+        <blockquote className={"editorial-quote mt-7"}>
+          <p>The moment our caregiver walked in, Mom smiled. That told us everything we needed to know.</p>
+          <footer><cite>Client Family Member, Atlanta GA</cite></footer>
+        </blockquote>
         {" "}
       </div>
       {" "}

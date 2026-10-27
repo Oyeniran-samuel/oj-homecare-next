@@ -21,7 +21,7 @@ export default function ContactMessageForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-[640px] [&_label]:text-[15px] [&_label]:font-semibold [&_input]:mt-1.5 [&_input]:w-full [&_input]:rounded-lg [&_input]:border [&_input]:border-[#e0e0e0] [&_input]:p-3 [&_input]:text-[15px] [&_textarea]:mt-1.5 [&_textarea]:w-full [&_textarea]:rounded-lg [&_textarea]:border [&_textarea]:border-[#e0e0e0] [&_textarea]:p-3 [&_textarea]:text-[15px] [&_button]:w-full [&_button]:cursor-pointer [&_button]:rounded-lg [&_button]:bg-[#0D7377] [&_button]:px-6 [&_button]:py-3 [&_button]:font-semibold [&_button]:text-white [&_button:hover]:bg-[#0B5656]"
+      className="w-full max-w-[640px] [&_label]:text-[15px] [&_label]:font-semibold [&_input]:mt-1.5 [&_input]:w-full [&_input]:rounded-lg [&_input]:border [&_input]:border-[#e0e0e0] [&_input]:p-3 [&_input]:text-[15px] [&_input:focus]:border-[#0D7377] [&_input:focus]:ring-2 [&_input:focus]:ring-[#0D7377]/15 [&_textarea]:mt-1.5 [&_textarea]:w-full [&_textarea]:rounded-lg [&_textarea]:border [&_textarea]:border-[#e0e0e0] [&_textarea]:p-3 [&_textarea]:text-[15px] [&_textarea:focus]:border-[#0D7377] [&_textarea:focus]:ring-2 [&_textarea:focus]:ring-[#0D7377]/15 [&_button]:w-full [&_button]:cursor-pointer [&_button]:rounded-full [&_button]:bg-[#0D7377] [&_button]:px-6 [&_button]:py-3 [&_button]:font-semibold [&_button]:text-white [&_button:hover]:bg-[#0B5656] [&_button:focus-visible]:outline-2 [&_button:focus-visible]:outline-offset-2 [&_button:focus-visible]:outline-[#0D7377]"
     >
       <p className="mt-0 mb-4">
         <label>
@@ -75,10 +75,6 @@ export default function ContactMessageForm() {
       </p>
       <p className="mt-0 mb-4">
         <button type="submit">Send Message</button>
-      </p>
-      <p className="text-sm text-[#5A6D74]">
-        Submitting opens an email draft addressed to OJ Home Care. Review and
-        send it from your email app.
       </p>
     </form>
   );
