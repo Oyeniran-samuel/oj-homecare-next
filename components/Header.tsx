@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 
 const whyLinks = [
@@ -62,21 +63,32 @@ function Brand() {
   );
 }
 
+function navLinkClass(active: boolean) {
+  return `whitespace-nowrap text-[15px] no-underline transition-colors max-[1399px]:text-sm ${
+    active
+      ? "font-semibold text-[#7FD1C8] underline decoration-[#7FD1C8] decoration-2 underline-offset-[6px]"
+      : "text-white hover:text-[#7FD1C8]"
+  }`;
+}
+
 function Dropdown({
   title,
   href,
   links,
+  active,
 }: {
   title: string;
   href: string;
   links: string[][];
+  active: boolean;
 }) {
   return (
     <span className="group relative inline-block">
       <Link
         href={href}
         aria-haspopup="true"
-        className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+        aria-current={active ? "page" : undefined}
+        className={navLinkClass(active)}
       >
         {title}
       </Link>
@@ -99,6 +111,16 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    const base = href.split("#")[0];
+    if (base === "/") return pathname === "/";
+    return pathname === base || pathname.startsWith(`${base}/`);
+  }
+
+  const servicesActive =
+    isActive("/services") || serviceLinks.some(([, href]) => pathname === href);
 
   function closeMenu() {
     setMenuOpen(false);
@@ -108,33 +130,46 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-[1000]">
-      <nav className="w-full border-b border-white/10 bg-[#092D3C] py-4 shadow-[0_8px_24px_rgba(9,45,60,0.12)]">
+      <nav className="w-full border-b border-[rgba(0,0,0,0.05)] bg-[#092D3C] py-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
         <div className="mx-auto flex w-full max-w-[1300px] items-center justify-between px-10 max-[1100px]:px-6 max-[420px]:px-4">
           <Brand />
           <div className="hidden items-center gap-4 min-[1101px]:flex">
             <Link
               href="/services"
-              className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+              aria-current={servicesActive ? "page" : undefined}
+              className={navLinkClass(servicesActive)}
             >
               Services
             </Link>
-            <Dropdown title="Why OJ" href="/why-oj" links={whyLinks} />
+            <Dropdown
+              title="Why OJ"
+              href="/why-oj"
+              links={whyLinks}
+              active={isActive("/why-oj")}
+            />
             <Link
               href="/testimonials"
-              className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+              aria-current={isActive("/testimonials") ? "page" : undefined}
+              className={navLinkClass(isActive("/testimonials"))}
             >
               Testimonials
             </Link>
             <Link
               href="/contact"
-              className="whitespace-nowrap text-[15px] text-white no-underline hover:text-[#7FD1C8] max-[1399px]:text-sm"
+              aria-current={isActive("/contact") ? "page" : undefined}
+              className={navLinkClass(isActive("/contact"))}
             >
               Contact
             </Link>
-            <Dropdown title="About Us" href="/about" links={aboutLinks} />
+            <Dropdown
+              title="About Us"
+              href="/about"
+              links={aboutLinks}
+              active={isActive("/about")}
+            />
             <Link
               href="/contact"
-              className="whitespace-nowrap rounded-full bg-[#0D7377] px-5 py-2.5 font-semibold text-white no-underline shadow-[0_5px_16px_rgba(0,0,0,0.14)] transition-colors hover:bg-[#0B5656] max-[1399px]:text-[13px]"
+              className="whitespace-nowrap rounded-full bg-[#0D7377] px-5 py-2.5 font-semibold text-white no-underline shadow-[0_5px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0B5656] hover:shadow-[0_10px_24px_rgba(13,115,119,0.45)] max-[1399px]:text-[13px]"
             >
               Schedule a Free Consultation
             </Link>

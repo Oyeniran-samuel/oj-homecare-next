@@ -267,7 +267,7 @@ main > section > div[class~="max-w-[1400px]"] {
   margin-inline: 0;
   border: 1px solid #e4ecec;
   border-left: 3px solid #0d7377;
-  border-radius: 14px;
+  border-radius: 16px;
   background: linear-gradient(135deg, #f8fbfb 0%, #f1f7f6 100%);
   padding: 20px 22px;
   color: #405a61;
@@ -302,7 +302,59 @@ main > section > div[class~="max-w-[1400px]"] {
 }
 
 .editorial-fact {
-  border-radius: 14px;
+  border-radius: 16px;
+}
+
+/* Two-column editorial photo panels stretch to match the adjacent text. */
+.media-frame {
+  position: relative;
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.media-frame > img:not([alt="Founder portrait"]):not([alt="OJ Home Care logo"]) {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* Homepage onboarding photo matches the height of its text column. */
+.onboarding-media {
+  display: flex;
+  align-self: stretch;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.onboarding-media > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* One consistent hover transition for every interactive control. */
+main a,
+main button,
+header a,
+header button,
+footer a {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 180ms;
+  transition-timing-function: ease;
 }
 
 .editorial-fact p:last-child {
@@ -458,34 +510,6 @@ main section {
   main > div:has(img[alt="Founder portrait"]) > * {
     width: 100%;
   }
-
-  /* Brochure layout: every photo sits BESIDE its text at its exact native
-     aspect ratio, vertically centred against the text block, never stretched
-     or cropped. Founder image is excluded everywhere and left untouched. */
-  .media-frame {
-    align-self: center;
-    min-height: 0;
-    overflow: visible;
-  }
-
-  .media-frame > img:not([alt="Founder portrait"]):not([alt="OJ Home Care logo"]) {
-    position: static;
-    inset: auto;
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    object-position: top center;
-    border-radius: 16px;
-  }
-
-  img[alt="Consultation on couch"] {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 16px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -495,21 +519,6 @@ main section {
 
   main [class~="grid-cols-3"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .media-frame {
-    align-self: center;
-    height: auto;
-    min-height: 0;
-  }
-
-  .media-frame > img:not([alt="Founder portrait"]) {
-    position: static;
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
   }
 }
 
@@ -523,17 +532,25 @@ main section {
 
   main div:has(> .media-frame) > .media-frame {
     order: -1;
+    flex: none;
     margin-top: 0;
+    height: clamp(200px, 58vw, 280px);
     min-height: 0;
   }
 
   .media-frame > img:not([alt="Founder portrait"]) {
-    position: static;
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
-    height: auto;
-    max-height: 250px;
+    height: 100%;
+    max-height: none;
     object-fit: cover;
+  }
+
+  .onboarding-media {
+    height: clamp(220px, 62vw, 300px);
+    margin-bottom: 24px;
   }
 
   .media-frame > img[alt="Elderly woman portrait"] {

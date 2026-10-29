@@ -102,7 +102,7 @@ export default function Home() {
           {stats.map(([value, label]) => (
             <div
               key={label}
-              className="rounded-2xl border border-[#E4ECEC] bg-white px-2 py-5 shadow-[0_8px_24px_rgba(9,45,60,0.055)] max-[420px]:rounded-xl max-[420px]:px-1.5"
+              className="rounded-2xl border border-[#E4ECEC] bg-white px-2 py-5 shadow-[0_8px_24px_rgba(9,45,60,0.055)] max-[420px]:px-1.5"
             >
               <b className="block text-[30px] leading-tight tracking-[-0.03em] text-[#0D7377] max-[420px]:text-[25px]">{value}</b>
               <span className="text-[13px] text-[#53676D]">{label}</span>
@@ -138,14 +138,14 @@ export default function Home() {
       <section id="getting-started" className="homepage-onboarding">
         <div className="mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] px-12 py-14 max-[767px]:px-5 max-[767px]:py-9">
           <div className="grid grid-cols-[42%_58%] gap-0 max-[767px]:grid-cols-1">
-            <div className="order-1">
+            <div className="onboarding-media order-1">
               <Image
                 src="/images/home-onboarding-pdf.jpg"
                 alt="Consultation on couch"
                 width={909}
                 height={1124}
                 sizes="(min-width: 768px) 42vw, 100vw"
-                className="max-w-full rounded-2xl object-contain max-[767px]:mt-6"
+                className="max-w-full rounded-2xl object-cover"
               />
             </div>
             <div className="order-2 pl-12 max-[767px]:pl-0">

@@ -15,7 +15,7 @@ export default function ContactPage() {
       {" "}
       <section id={"schedule-consultation"} className={"bg-[#F7FAFA]"}>
         <div className={"mx-auto w-full max-w-[1400px] border-t border-[#E6ECEF] px-12 py-14 max-[767px]:px-5 max-[767px]:py-9"}>
-          <div className={"mx-auto max-w-[720px] rounded-[24px] border border-[#E4ECEC] bg-white p-9 shadow-[0_16px_44px_rgba(9,45,60,0.07)] max-[767px]:rounded-2xl max-[767px]:p-5"}>
+          <div className={"mx-auto max-w-[720px] rounded-2xl border border-[#E4ECEC] bg-white p-9 shadow-[0_16px_44px_rgba(9,45,60,0.07)] max-[767px]:rounded-2xl max-[767px]:p-5"}>
             <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0D7377] uppercase"}>
               {"Free Consultation"}
             </p>
@@ -47,7 +47,7 @@ export default function ContactPage() {
               </h2>
               {" "}
               <div className={"grid grid-cols-1 gap-3 md:grid-cols-2"}>
-              <article className={"rounded-xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
+              <article className={"rounded-2xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
                 <h3 className={"mb-2 text-[16px] font-semibold max-[767px]:text-[15px]"}>
                   {"Q: How quickly can care begin?"}
                 </h3>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 </p>
               </article>
               {" "}
-              <article className={"rounded-xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
+              <article className={"rounded-2xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
                 <h3 className={"mb-2 text-[16px] font-semibold max-[767px]:text-[15px]"}>
                   {"Q: Do you accept insurance?"}
                 </h3>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 </p>
               </article>
               {" "}
-              <article className={"rounded-xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
+              <article className={"rounded-2xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
                 <h3 className={"mb-2 text-[16px] font-semibold max-[767px]:text-[15px]"}>
                   {"Q: Can I choose my caregiver?"}
                 </h3>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                 </p>
               </article>
               {" "}
-              <article className={"rounded-xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
+              <article className={"rounded-2xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
                 <h3 className={"mb-2 text-[16px] font-semibold max-[767px]:text-[15px]"}>
                   {"Q: What if my caregiver is sick?"}
                 </h3>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 </p>
               </article>
               {" "}
-              <article className={"rounded-xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
+              <article className={"rounded-2xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
                 <h3 className={"mb-2 text-[16px] font-semibold max-[767px]:text-[15px]"}>
                   {"Q: Are caregivers employees or contractors?"}
                 </h3>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                 </p>
               </article>
               {" "}
-              <article className={"rounded-xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
+              <article className={"rounded-2xl border border-[#E4ECEC] bg-white p-4 shadow-[0_6px_18px_rgba(9,45,60,0.045)]"}>
                 <h3 className={"mb-2 text-[16px] font-semibold max-[767px]:text-[15px]"}>
                   {"Q: Can care hours be adjusted?"}
                 </h3>
@@ -110,7 +110,7 @@ export default function ContactPage() {
             {" "}
           </div>
           {" "}
-          <div className={"editorial-fact mt-7 rounded-[10px] border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
+          <div className={"editorial-fact mt-7 rounded-2xl border-l-4 border-[#0D7377] bg-[#F3F8F8] px-[22px] py-[18px] text-[1.1rem] leading-[1.6] font-semibold text-[#287A45] italic"}>
             <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0F6E6E] uppercase not-italic"}>{"DID YOU KNOW?"}</p>
             <p className={"mt-0 mb-0"}>{"“90% of Americans over 65 say they want to remain in their own home as they age. OJ Home Care makes that wish a reality, safely and with heart.”"}
             </p>
@@ -180,7 +180,7 @@ export default function ContactPage() {
             {" "}
           </div>
           {" "}
-          <div className={"min-w-0 rounded-[24px] border border-[#E4ECEC] bg-[#F8FAFA] p-7 max-[767px]:rounded-2xl max-[767px]:p-5"}>
+          <div className={"min-w-0 rounded-2xl border border-[#E4ECEC] bg-[#F8FAFA] p-7 max-[767px]:rounded-2xl max-[767px]:p-5"}>
             {" "}
             <p className={"mt-0 mb-2 text-[13px] font-semibold tracking-[2px] text-[#0D7377] uppercase"}>
               {"Get In Touch"}
